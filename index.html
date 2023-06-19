@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Convertor</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="heading">
+          <i class="fa-solid fa-temperature-high"></i>
+          <h1>Temperature Convertor</h1>
+        </div>
+        <h2>Please enter the temperature you'd like to convert.</h2>
+        <form id="tempcal" onsubmit="calculatetemp() ; return false ">
+          <div class="row">
+            <input type="number" name="temp" id="temp" class="num" autofocus />
+            <select name="diff_temp" id="diff_temp">
+              <option value="cel">°Celsius</option>
+              <option value="fahr">°Fahrenheit</option>
+              <option value="kel">°Kelvin</option>
+            </select>
+          </div>
+          <br />
+          <input type="submit" name="temp" class="btn" />
+          <button class="clr_btn" id="clear">Clear</button>
+          <br />
+          <br />
+          <span id="result">
+            <p>
+              <br />
+            </p>
+          </span>
+        </form>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
